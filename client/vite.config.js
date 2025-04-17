@@ -5,6 +5,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/", // or './' depending on your deployment setup
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
@@ -15,7 +16,6 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      // eslint-disable-next-line no-undef
       "@": path.resolve(__dirname, "./src"),
     },
   },
